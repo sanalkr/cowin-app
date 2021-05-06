@@ -33,7 +33,7 @@ export class AppComponent {
     this.swPush.requestSubscription({
       serverPublicKey: this.VAPID_PUBLIC_KEY
     })
-    .then(sub => this.newsletterService.addPushSubscriber(sub).subscribe())
+    .then(sub => console.log(sub))//this.newsletterService.addPushSubscriber(sub).subscribe())
     .catch(err => console.error("Could not subscribe to notifications", err));
 
   }
